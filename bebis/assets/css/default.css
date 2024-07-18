@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    background: #EBECEE url("../img/bg-header-img.jpg") no-repeat 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    font-family: Damion, sans-serif;
+    text-align: center;
+    font-size: 150px;
+}
+
+h1 span {
+    color: #d15f70;
+}
+
+h2 {
+    font-family: Damion, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+h2 span {
+    color: rgb(33, 150, 243);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 70px;
+        margin-top: 60px;
+        line-height: 50px;
+        margin-bottom: 40px;
+    }
+    h2 {
+        font-size: 50px;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 70px;
+        margin-top: 60px;
+        line-height: 50px;
+        margin-bottom: 40px;
+    }
+    h2 {
+        font-size: 50px;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 50px;
+        margin-top: 20px;
+        line-height: 50px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 50px;
+        margin-top: 80px;
+        line-height: 50px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+}

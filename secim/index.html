@@ -1,0 +1,108 @@
+<html ng-app="sApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style>
+        td {
+            font-weight: bold !important;
+        }
+        
+        body {
+            padding: 0 0 20px 0;
+        }
+        
+        .buyuk {
+            font-size: 30px !important;
+        }
+        
+        * {
+            outline: 0 !important;
+        }
+    </style>
+</head>
+
+<body ng-controller="sController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="padding: 0;">
+
+                <h3>Başkanlık Seçim Sonucu</h3>
+                <table class="table table-condensed table-striped table-bordered">
+                    <tr>
+                        <td class="text-center"><button class="btn btn-success" ng-click="Ekle('CHP')">CHP</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="Ekle('AKP')">AKP</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="Ekle('IYI')">IYI</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="Ekle('SP')">SP</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="Ekle('HDP')">HDP</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="Ekle('Diger')">Diğer</button></td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-center text-bold buyuk">{{countCHP}}</td>
+                        <td class="text-center text-bold buyuk">{{countAKP}}</td>
+                        <td class="text-center text-bold buyuk">{{countIYI}}</td>
+                        <td class="text-center text-bold buyuk">{{countSP}} </td>
+                        <td class="text-center text-bold buyuk">{{countHPD}}</td>
+                        <td class="text-center text-bold buyuk">{{countDiger}}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="Cikart('CHP')">CHP</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="Cikart('AKP')">AKP</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="Cikart('IYI')">IYI</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="Cikart('SP')">SP</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="Cikart('HDP')">HDP</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="Cikart('Diger')">Diğer</button></td>
+                    </tr>
+                </table>
+                <hr>
+                <h3>Millet Vekili Seçim Sonucu</h3>
+                <table class="table table-condensed table-striped table-bordered">
+                    <tr>
+                        <td class="text-center"><button class="btn btn-success" ng-click="EkleMV('CHP')">CHP</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="EkleMV('AKP')">AKP</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="EkleMV('IYI')">IYI</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="EkleMV('SP')">SP</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="EkleMV('HDP')">HDP</button></td>
+                        <td class="text-center"><button class="btn btn-success" ng-click="EkleMV('Diger')">Diğer</button></td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-center text-bold buyuk">{{countCHPMV}}</td>
+                        <td class="text-center text-bold buyuk">{{countAKPMV}}</td>
+                        <td class="text-center text-bold buyuk">{{countIYIMV}}</td>
+                        <td class="text-center text-bold buyuk">{{countSPMV}} </td>
+                        <td class="text-center text-bold buyuk">{{countHPDMV}}</td>
+                        <td class="text-center text-bold buyuk">{{countDigerMV}}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="CikartMV('CHP')">CHP</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="CikartMV('AKP')">AKP</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="CikartMV('IYI')">IYI</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="CikartMV('SP')">SP</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="CikartMV('HDP')">HDP</button></td>
+                        <td class="text-center"><button class="btn btn-danger" ng-click="CikartMV('Diger')">Diğer</button></td>
+                    </tr>
+                </table>
+                <hr>
+                <p>Yeşil butonlar oy eklemek için, kırmızı butonlar yanlış eklenen oyları eksiltmek içindir.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="app.js?ver=001"></script>
+</body>
+
+</html>

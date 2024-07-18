@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  user-select: none;
+  box-sizing: content-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection{
+    color: none;
+    background: none;
+    outline: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #444;
+}
+
+.lamba-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}
+
+.lamba {
+  background-color: #fff; 
+  border-radius: 50%;
+  width: 70%;
+  padding-top: 70%;
+  margin: 15%;
+  cursor: pointer;
+  position: relative;
+}
+ 
+.kirmizi.patladi{
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px red, 0 0 35px red, 0 0 40px red;
+}
+.mavi.patladi{
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px blue, 0 0 35px blue, 0 0 40px blue;
+}
+.yesil.patladi{
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px green, 0 0 35px green, 0 0 40px green;
+}
+.sari.patladi{
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px yellow, 0 0 35px yellow, 0 0 40px yellow;
+}
+.pembe.patladi{
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #7FFF00, 0 0 35px #7FFF00, 0 0 40px #7FFF00;
+}
+
+
+.off{
+  background-color: grey;
+  box-shadow: none;
+}
+
+.shine{
+  background-color: #fff;
+  animation: neon 0.5s ease infinite;
+}
+
+
+@keyframes neon {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px red, 0 0 70px red, 0 0 80px red, 0 0 100px red, 0 0 150px red, 0 0 200px red;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px red, 0 0 35px red, 0 0 40px red, 0 0 50px red, 0 0 75px red;
+  }
+}
+
+@keyframes neon2 {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px red, 0 0 70px red, 0 0 80px red, 0 0 100px red, 0 0 150px red, 0 0 200px red;
+  }
+  to {
+    background-color: #fff;
+  }
+}

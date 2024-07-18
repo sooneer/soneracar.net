@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bebiş geliyor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/css/default.css" />
+
+</head>
+
+<body>
+    <h1>Yeni bir <span>Acar</span> Geliyor</h1>
+    <h2 id="gecen"></h2>
+    <h2 id="kalan"></h2>
+
+    <script>
+        var firsDate = new Date(2020, 05, 12).getTime();
+        var now = new Date().getTime();
+
+
+        var distance2 = now - firsDate;
+
+        var weeks = Math.floor(distance2 / (1000 * 60 * 60 * 24 * 7));
+        //var days = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+        var days = Math.floor((distance2 % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("gecen").innerHTML = "<span>" + weeks + " hafta " + days + " gün " + hours + " saat " + minutes + " dakika</span> geçti. ";
+
+
+
+
+        var countDownDate = new Date(2021, 2, 19).getTime();
+
+        // var now = new Date(2020, 5, 12).getTime();
+        console.log('last:', new Date(2021, 2, 19), 'first:', new Date());
+
+        var distance = countDownDate - now;
+
+        var weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
+        //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("kalan").innerHTML = "<span>" + weeks + " hafta " + days + " gün " + hours + " saat " + minutes + " dakika</span> kaldı.";
+    </script>
+</body>
+
+</html>

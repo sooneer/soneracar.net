@@ -1,0 +1,27 @@
+{
+    "short_name": "APA Balloon",
+    "name": "APA Balloon Games",
+    "icons": [
+      {
+        "src": "assets/icons-512.svg",
+        "type": "image/svg+xml",
+        "sizes": "512x512"
+      },
+      {
+        "src": "assets/icons-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "assets/icons-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/balon",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": "/balon",
+    "theme_color": "#FFFFFF",    
+    "description": "APA Balloon Game"
+  }

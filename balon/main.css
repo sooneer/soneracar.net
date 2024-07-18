@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  user-select: none;
+  box-sizing: content-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection{
+    color: none;
+    background: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.balon-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+  height: 95vh;
+}
+
+.balon {
+  padding: 5px;
+  background-size: contain;
+  cursor: pointer;
+  background: transparent url("assets/kirmizi.svg") no-repeat center center;
+}
+
+.patladi {
+  visibility:hidden;
+}
+.kirmizi, .kirmizi:focus, .kirmizi:hover {
+  background: transparent url("assets/kirmizi.svg") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}
+.mavi, .mavi:focus, .mavi:hover {
+  background: transparent url("assets/mavi.svg") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}
+.yesil, .yesil:focus, .yesil:hover  {
+  background: transparent url("assets/yesil.svg") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}
+.sari, .sari:focus, .sari:hover  {
+  background: transparent url("assets/sari.svg") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}
+.pembe, .pembe:focus, .pembe:hover  {
+  background: transparent url("assets/pembe.svg") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}
